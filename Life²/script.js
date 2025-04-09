@@ -7,7 +7,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const chunkSize = 500; // Number of blocks per chunk
-const maxHeight = 2; // Max height of terrain
+const maxHeight = 1; // Max height of terrain
 
 let chunks = {}; // Store generated chunks by their X position (or any unique identifier)
 let rightString = "";
