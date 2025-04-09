@@ -206,10 +206,19 @@ function draw() {
     }
   }
 
-  // --- Draw character ---
-  const characterScreenX = canvas.width / 2;
-  ctx.drawImage(characterImage, characterScreenX, character.y, character.width, character.height);
+// --- Draw character ---
+const characterScreenX = canvas.width / 2;
 
+// If moving right, flip the character horizontally
+if (keys.right) {
+  ctx.save(); // Save the current state of the canvas
+  ctx.scale(-1, 1); // Flip the canvas horizontally
+  ctx.drawImage(characterImage, -characterScreenX - character.width, character.y, character.width, character.height); // Draw the image mirrored
+  ctx.restore(); // Restore the canvas state to prevent affecting other parts
+} else {
+  // If not moving right (i.e., moving left or standing still), draw normally
+  ctx.drawImage(characterImage, characterScreenX, character.y, character.width, character.height);
+}
   // FPS display
   ctx.fillStyle = "black";
   ctx.font = "16px monospace";
