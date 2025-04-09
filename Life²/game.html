@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life²</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+button {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 1;
+  color: black;
+  font-family: sans-serif;
+  background: transparent;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+<button onclick="window.location.href='index.html';">⏸️</button>
+  <canvas id="numberCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
